@@ -1,8 +1,3 @@
-Ось приклад невеликого `README.md` файлу для вашого проєкту:
-
-### `README.md`
-
-```markdown
 # Kids Story Generator
 
 Kids Story Generator is a web application that generates children's stories based on a user-provided theme. 

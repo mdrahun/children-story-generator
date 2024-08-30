@@ -46,6 +46,21 @@ The application leverages modern AI tools to create engaging and creative storie
 
 3. **Enter a theme for the story and click "Generate Story".**
 
+
+### Production
+
+1. **Run the application in production mode using Gunicorn:**
+
+   ```bash
+   poetry run gunicorn -w 4 -b 0.0.0.0:8000 main:app
+   ```
+
+2. **Open your browser and navigate to:**
+
+   ```
+   http://0.0.0.0:8000
+   ```
+
 ## Dependencies
 
 - Python 3.10+
@@ -53,3 +68,9 @@ The application leverages modern AI tools to create engaging and creative storie
 - LangChain
 - Google Generative AI
 - Requests
+- Gunicorn
+
+## Notes
+
+- In a production environment, it is recommended to use Gunicorn or another WSGI server instead of the built-in Flask development server.
+- Ensure that all required environment variables are set up correctly for the application to function.

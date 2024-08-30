@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Story Generator</title>
+    <title>Kids' Story Generator</title>
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,13 +16,12 @@
       hx-target="#story-container"
       hx-indicator="#spinner"
       hx-swap="innerHTML">
-    <label for="theme">Enter a theme for the story:</label>
-    <input type="text" id="theme" name="theme" placeholder="e.g., a brave knight, a magical forest" required>
+    <input type="text" id="theme" name="theme" placeholder="Enter a theme for the story: e.g., a brave knight, a magical forest" required>
     <button type="submit">Generate Story</button>
 </form>
 
 <div id="story-container">
-    <img id="spinner" class="htmx-indicator" src="spinner.gif" alt="Loading..." style="display: block;" />
+    <img id="spinner" class="htmx-indicator" src="spinner.gif" alt="Loading..." />
     <!-- The generated story will appear here -->
 </div>
 

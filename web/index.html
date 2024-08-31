@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Kids' Story Generator</h1>
+<h1 id="story-form-label">Kids' Story Generator</h1>
 
+<!-- Form for submitting the story theme -->
 <form id="story-form"
       hx-post="/api/generate"
       hx-trigger="submit"
       hx-target="#story-container"
       hx-indicator="#spinner"
-      hx-swap="innerHTML">
-    <input type="text" id="theme" name="theme" placeholder="Enter a theme for the story: e.g., a brave knight, a magical forest" required>
+      hx-swap="innerHTML"
+      aria-labelledby="story-form-label">
+    <input type="text" id="theme" name="theme"
+           placeholder="Enter a theme for the story: e.g., a brave knight, a magical forest"
+           required aria-label="Story theme">
     <button type="submit">Generate Story</button>
 </form>
 
-<div id="story-container">
-    <img id="spinner" class="htmx-indicator" src="spinner.gif" alt="Loading..." />
+<!-- Container for the generated story and loading spinner -->
+<div id="story-container" aria-live="polite" aria-busy="false">
+    <img id="spinner" class="htmx-indicator" src="spinner.gif" alt="Loading..." aria-hidden="true" />
     <!-- The generated story will appear here -->
 </div>
-
 </body>
 </html>

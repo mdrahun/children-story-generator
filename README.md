@@ -69,8 +69,21 @@ The application leverages modern AI tools to create engaging and creative storie
 - Google Generative AI
 - Requests
 - Gunicorn
+- python-dotenv
 
-## Notes
 
-- In a production environment, it is recommended to use Gunicorn or another WSGI server instead of the built-in Flask development server.
-- Ensure that all required environment variables are set up correctly for the application to function.
+### Tech Stack
+
+- Backend:
+   - Python: Core programming language.
+   - Flask: Web framework for routing and handling HTTP requests.
+   - LangChain: Library for working with language models.
+   - Google Generative AI: API for text generation.
+
+- Frontend:
+   - HTMX: Library for server-driven UI updates without JavaScript.
+   - HTML/CSS: For structuring and styling web pages.
+
+- Infrastructure:
+   - Poetry: Dependency management and virtual environment setup.
+   - Gunicorn: WSGI server.
